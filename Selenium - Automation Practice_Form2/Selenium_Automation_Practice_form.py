@@ -58,5 +58,8 @@ Selenium_Commands.select_by_visible_text("WebElement Commands")
 
 Button = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[2]/div[4]/div/form/table/tbody/tr[11]/td[2]/button")
 Button.click()
-time.sleep(15)
+time.sleep(3)
+#handling with popup
+driver.switch_to.alert.accept()
+driver.quit()
 print("testing done!")
