@@ -33,14 +33,17 @@ driver.find_element(By.ID, 'ohrmList_chkSelectRecord_39').click()
 driver.find_element(By.ID, 'ohrmList_chkSelectRecord_38').click()
 driver.find_element(By.ID, 'ohrmList_chkSelectRecord_33').click()
 driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_23"]').click()
-
+time.sleep(5)
 
 #PIM
 driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[2]').click()
-driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_64"]').click()
 
+#Checkboxes
+driver.find_element(By.ID, 'ohrmList_chkSelectRecord_64').click()
+driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_68"]').click()
+driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_54"]').click()
 
-#time.sleep(5)
+time.sleep(5)
 #Logout
 driver.find_element(By.ID, 'welcome').click()
 driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[1]').click()
