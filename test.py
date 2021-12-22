@@ -19,7 +19,30 @@ time.sleep(10)
 driver.quit()
 print("Testing done and refreshed instead of submit the form!!👏👏")
 
+############################Unit test###########
+import unittest
 
+class LoginTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome(executable_path="")
+        cls.driver.implicitly_wait(10)
+        cls.driver.maximize_window()
+
+
+    def test_login_valid(self):
+        driver = self.driver
+
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        print("Login Test successfully!")
+
+
+if __name__ == '__main__':
+    unittest.main()
 
 
 
