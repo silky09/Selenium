@@ -1,11 +1,11 @@
 import time
-
+import unittest
+import HtmlTestRunner
 from selenium import webdriver
-
 from webdriver_manager.chrome import ChromeDriverManager
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
