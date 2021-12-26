@@ -33,17 +33,22 @@ uploadPic = driver.find_element(By.ID,'uploadPicture')
 uploadPic.send_keys("C:/Users/santo/PycharmProjects/SeleniumDemoProject/Images/Demo_image.png")
 
 Address = driver.find_element(By.ID,'currentAddress')
-Address.send_keys("Sweden!")
+Address.send_keys("Sweden")
 
-Select_city = driver.find_element(By.XPATH, '//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[10]/div[2]/div[1]/div[1]/div[1]/div[1]')
-Select_city.click()
-driver.find_element(By.ID, "react-select-3-option-2").click()
+#Select_city = driver.find_element(By.XPATH, '//*[@id="state"]/div/div[1]/div[2]')
+#Select_city.click()
+#driver.find_element(By.ID, "react-select-3-option-2").click()
 
-driver.find_element(By.XPATH, "//div[@id='city']/div/div[2]/div").click()
+#driver.find_element(By.XPATH, "//div[@id='city']/div/div[2]/div").click()
+#driver.find_element(By.ID, "react-select-4-option-1").click()
+
+#Submit = driver.find_element(By.ID, 'submit')
+#Submit.click()
+"""driver.find_element(By.XPATH, "(.//*[normalize-space(text()) and normalize-space(.)='Select State'])[1]/following::*[name()='svg'][1]").click()
+driver.find_element(By.ID, "react-select-3-option-1").click()
+driver.find_element(By.XPATH, "//div[@id='city']/div/div/div").click()
 driver.find_element(By.ID, "react-select-4-option-1").click()
-
-Submit = driver.find_element(By.ID, 'submit')
-Submit.click()
+driver.find_element(By.ID, "submit").click()"""
 
 time.sleep(2)
 driver.quit()
