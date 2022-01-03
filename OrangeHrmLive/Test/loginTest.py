@@ -5,7 +5,8 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-
+from OrangeHrmLive.pageObjects.loginPage import LoginPage
+from OrangeHrmLive.pageObjects.homePage import HomePage
 
 
 
@@ -23,35 +24,53 @@ class LoginTest(unittest.TestCase):
         # Login panel
         driver = self.driver
         driver.get("https://opensource-demo.orangehrmlive.com/")
-        driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
+
+        login = LoginPage(driver)
+        login.enter_username("Admin")
+        login.enter_password("admin123")
+        login.click_login()
+
+        admin = HomePage(driver)
+        admin.click_admin()
+        admin.select_aravind_checkbox()
+        #admin.select_bhuvan_checkbox()
+
+        time.sleep(2)
+
+        pim = HomePage(driver)
+        pim.click_pim()
+        time.sleep(2)
+        pim.click_reset()
+
+        logout = HomePage(driver)
+        logout.click_welcome()
+        time.sleep(2)
+        logout.click_logout()
+
+        """driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
-        driver.find_element(By.ID, 'btnLogin').click()
+        driver.find_element(By.ID, 'btnLogin').click()"""
 
         # Click Admin
 
-        self.driver.find_element(By.XPATH, '//*[@id="menu_admin_viewAdminModule"]').click()
+        """driver.find_element(By.XPATH, '//*[@id="menu_admin_viewAdminModule"]').click()
         # click username multi Checkboxes
-        self.driver.find_element(By.ID, 'ohrmList_chkSelectRecord_46').click()
-        self.driver.find_element(By.ID, 'ohrmList_chkSelectRecord_39').click()
-        self.driver.find_element(By.ID, 'ohrmList_chkSelectRecord_38').click()
-        self.driver.find_element(By.ID, 'ohrmList_chkSelectRecord_33').click()
-        self.driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_23"]').click()
+        #click aravind
+        driver.find_element(By.ID, 'ohrmList_chkSelectRecord_39').click()
+        #click bhuvan
+        driver.find_element(By.ID, 'ohrmList_chkSelectRecord_51').click()"""
 
 
         # PIM
-        self.driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[2]').click()
+        #self.driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[2]').click()
 
-        # Checkboxes
-        # driver.find_element(By.ID, 'ohrmList_chkSelectRecord_64').click()
-        # driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_68"]').click()
-        # driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_54"]').click()
-
-        # time.sleep(3)
+        # click reset button
+        #self.driver.find_element(By.ID, 'resetBtn').click()
 
         # Logout
-        self.driver.find_element(By.ID, 'welcome').click()
-        time.sleep(3)
-        self.driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[1]').click()
+        #self.driver.find_element(By.ID, 'welcome').click()
+        #time.sleep(2)
+        #self.driver.find_element(By.XPATH, '//*[@id="mainMenuFirstLevelUnorderedList"]/li[1]').click()
 
     @classmethod
     def tearDownClass(cls):
