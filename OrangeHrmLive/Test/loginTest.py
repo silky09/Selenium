@@ -5,9 +5,11 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-from OrangeHrmLive.pageObjects.loginPage import LoginPage
-from OrangeHrmLive.pageObjects.homePage import HomePage
 
+from OrangeHrmLive.pageObjects.homePage import HomePage
+import HtmlTestRunner
+
+from OrangeHrmLive.pageObjects.loginPage import LoginPage
 
 
 class LoginTest(unittest.TestCase):
@@ -83,7 +85,7 @@ class LoginTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/santo/PycharmProjects/SeleniumDemoProject/OrangeHrmLive/reports'))
 
 # to run in the terminal
 # cd C:\Users\santo\PycharmProjects\SeleniumDemoProject\OrangeHrmLive\Test
