@@ -30,9 +30,8 @@ driver.find_element(By.XPATH, '//*[@id="menu_admin_viewAdminModule"]').click()
 #click username multi Checkboxes
 driver.find_element(By.ID, 'ohrmList_chkSelectRecord_46').click()
 driver.find_element(By.ID, 'ohrmList_chkSelectRecord_39').click()
-driver.find_element(By.ID, 'ohrmList_chkSelectRecord_38').click()
-driver.find_element(By.ID, 'ohrmList_chkSelectRecord_33').click()
-driver.find_element(By.XPATH, '//*[@id="ohrmList_chkSelectRecord_23"]').click()
+"""driver.find_element(By.ID, 'ohrmList_chkSelectRecord_38').click()
+driver.find_element(By.ID, 'ohrmList_chkSelectRecord_33').click()"""
 #time.sleep()
 
 #PIM
