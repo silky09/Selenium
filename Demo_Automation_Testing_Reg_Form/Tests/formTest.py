@@ -86,7 +86,7 @@ class FormTest(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/santo/PycharmProjects/SeleniumDemoProject/Demo_Automation_Testing_Reg_Form/Reports"))
 
-#driver.minimize_window()
+
 
 
 
