@@ -44,6 +44,13 @@ class LoginTest(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+#POM
+# from Demo_Automation_Testing_Reg_Form.PageObject.mainPage import MainPage
+# 1. constructor
+# 2. objectelements + types + locators
+# 3. action method (for every individual elements)
 
+# use this command in the terminal to run the file and generate HTML report
+# python -m Demo_Automation_Testing_Reg_Form.Tests.formTest(file name)
 
 
