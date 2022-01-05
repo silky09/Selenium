@@ -10,6 +10,7 @@ class HomePage():
     #select checkboxes
         self.aravind_checkbox_ID = 'ohrmList_chkSelectRecord_39'
         self.bhuvan_checkbox_ID = 'ohrmList_chkSelectRecord_51'
+        self.chandra_checkbox_XPATH = '//*[@id="ohrmList_chkSelectRecord_65"]'
 
     # click PIM
         self.pim_link_XPATH = '//*[@id="mainMenuFirstLevelUnorderedList"]/li[2]'
@@ -29,6 +30,9 @@ class HomePage():
 
     def select_bhuvan_checkbox(self):
         self.driver.find_element(By.ID,  self.bhuvan_checkbox_ID).click()
+
+    def select_chandra_checkbox(self):
+        self.driver.find_element(By.XPATH,  self.chandra_checkbox_XPATH).click()
 
     def click_pim(self):
         self.driver.find_element(By.XPATH, self.pim_link_XPATH).click()

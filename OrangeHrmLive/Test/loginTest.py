@@ -34,8 +34,9 @@ class LoginTest(unittest.TestCase):
 
         admin = HomePage(driver)
         admin.click_admin()
-        admin.select_aravind_checkbox()
+        #admin.select_aravind_checkbox()
         #admin.select_bhuvan_checkbox()
+        #admin.select_chandra_checkbox()
 
         time.sleep(2)
 
