@@ -2,8 +2,9 @@ import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
 from webdriver_manager.chrome import ChromeDriverManager
+from seleniumAutomationPracticePage.PageObjects.mainPage import MainPage
+import HtmlTestRunner
 
 class formTest(unittest.TestCase):
 
@@ -18,15 +19,16 @@ class formTest(unittest.TestCase):
         driver = self.driver
         driver.get("https://automationexplore.com/selenium-automation-practice-page/")
         print(driver.title)
-        driver.find_element(By.ID, "firstname").send_keys("Swe")
-        driver.find_element(By.ID, "lastname").send_keys("Den")
-        driver.find_element(By.ID, "email").send_keys("S@gmail.com")
-        driver.find_element(By.XPATH, "//*[@id='post-253']/div[2]/form/fieldset/input[4]").click()
-        driver.find_element(By.XPATH, "//*[@id='post-253']/div[2]/form/fieldset/input[7]").click()
-        driver.find_element(By.XPATH, "//*[@id='post-253']/div[2]/form/fieldset/input[8]").click()
-        driver.find_element(By.XPATH, "//*[@id='post-253']/div[2]/form/fieldset/select/option[2]").click()
-        driver.find_element(By.XPATH, "//*[@id='skillsmultiple']/option[2]").click()
-        driver.find_element(By.ID, "alertbutton").click()
+
+        Info = MainPage(driver)
+        Info.enter_firstName("MinSwe")
+        Info.enter_lastName("Den")
+        Info.enter_email("S@gmail.com")
+        Info.select_genderMale()
+        Info.select_WorkingProfession()
+        Info.select_USA_country()
+        Info.select_skills_AutomationTesting()
+        Info.click_clickHereToGetAlertButton()
 
         time.sleep(3)
         # driver.switch_to_alert().accept()
@@ -42,7 +44,7 @@ class formTest(unittest.TestCase):
         print("Testing done!")
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/santo/PycharmProjects/SeleniumDemoProject/seleniumAutomationPracticePage/Reports"))
 
 
 
