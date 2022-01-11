@@ -13,8 +13,9 @@ driver.get("https://www.tutorialspoint.com/selenium/selenium_automation_practice
 driver.maximize_window()
 driver.implicitly_wait(10)
 
-consent = driver.find_element(By.XPATH,"/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]/p")
-consent.click()
+#consent = driver.find_element(By.XPATH,"/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]/p")
+
+#consent.click()
 First_Name = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[2]/div[4]/div/form/table/tbody/tr[1]/td[2]/input")
 First_Name.send_keys("swe")
 Last_Name = driver.find_element(By.XPATH, "//body[1]/div[1]/div[1]/div[2]/div[4]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/input[1]")

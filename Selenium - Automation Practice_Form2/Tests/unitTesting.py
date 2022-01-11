@@ -24,8 +24,8 @@ class formTesting(unittest.TestCase):
         print("Title of the page: ", driver.title)
         print("URL of the page: ", driver.current_url)
 
-        consent = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]/p")
-        consent.click()
+        #consent = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]/p")
+        #consent.click()
         First_Name = driver.find_element(By.XPATH,
                                          "/html/body/div[1]/div/div[2]/div[4]/div/form/table/tbody/tr[1]/td[2]/input")
         First_Name.send_keys("swe")
