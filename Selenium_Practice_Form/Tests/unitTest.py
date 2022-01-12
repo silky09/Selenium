@@ -42,10 +42,12 @@ class FormTesting(unittest.TestCase):
         Fri_Available = driver.find_element(By.XPATH, "//*[@id='q15']/table/tbody/tr[6]/td")
         Fri_Available.click()
 
-        Best_Time_To_Contact = driver.find_element(By.ID, "RESULT_RadioButton-9")
-        Best_Time_To_Contact.click()
-        Morning = driver.find_element(By.XPATH, "//*[@id='RESULT_RadioButton-9']/option[2]")
-        Morning.click()
+        # Best_Time_To_Contact = driver.find_element(By.ID, "RESULT_RadioButton-9")
+        # Best_Time_To_Contact.click()
+        # Morning = driver.find_element(By.XPATH, "//*[@id='RESULT_RadioButton-9']/option[2]")
+        # Morning.click()
+        Best_time_to_contact = Select(driver.find_element(By.XPATH, '//*[@id="RESULT_RadioButton-9"]' ))
+        Best_time_to_contact.select_by_visible_text("Morning")
 
         Upload_Files = driver.find_element(By.XPATH, "//*[@id='RESULT_FileUpload-10']")
         # give the complete path of the file where it is located
