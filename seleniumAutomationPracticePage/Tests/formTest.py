@@ -44,7 +44,7 @@ class formTest(unittest.TestCase):
         print("Testing done!")
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/santo/PycharmProjects/SeleniumDemoProject/seleniumAutomationPracticePage/Reports"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/santo/PycharmProjects/SeleniumDemoProject/seleniumAutomationPracticePage/reports"))
 
 
 

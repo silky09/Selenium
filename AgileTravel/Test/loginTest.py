@@ -10,6 +10,7 @@ from AgileTravel.PageObjects.loginPage import LoginPage
 from AgileTravel.PageObjects.welcomePage import WelcomePage
 from AgileTravel.PageObjects.passengerDetailsPage import PassengerDetailPage
 from AgileTravel.PageObjects.payment_SignoutPage import PaymentAndSignout
+import HtmlTestRunner
 
 class formTest(unittest.TestCase):
 
@@ -67,8 +68,6 @@ class formTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
-
-
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/santo/PycharmProjects/Selenium/AgileTravel/Reports"))
 
 
